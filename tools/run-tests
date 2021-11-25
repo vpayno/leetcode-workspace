@@ -1,0 +1,108 @@
+#!/bin/bash
+
+shopt -s nullglob
+
+declare -a PYTHON_FILES=( *[.]py )
+declare -a PYTHON_MODULES
+
+declare directory
+
+for directory in ./*; do
+	[[ -d ${directory} ]] || continue
+	[[ -f ${directory}/__init__.py ]] || continue
+	PYTHON_MODULES+=( "${directory}" )
+done
+
+python_mypy()
+{
+	echo Running: mypy "$@" "${PYTHON_MODULES[@]}"
+	time mypy "$@" "${PYTHON_MODULES[@]}"
+	printf "\n"
+} # python_mypy()
+
+python_pyre()
+{
+	if [[ ! -f .pyre_configuration ]]; then
+		pyre init <<< "."
+
+		# python -c 'import os; import re; import site; [print(re.sub(os.environ["HOME"], "${HOME}", path)) for path in site.getsitepackages()]'
+
+		# Xshellcheck disable=SC2046
+		#jq --sort-keys . <<-EOF > .pyre_configuration
+		#{
+		#	"source_directories": [
+		#		$(printf "{ \"site-package\": \"%s\"}," $(grep --no-filename ^import ./*[.]py | sort -u | awk '{ print $NF }' | grep -v -E '^(sys|os|path)$'))
+		#		"."
+		#	],
+		#	"taint_models_path": "${HOME}/.pyenv/versions/3.9.2/lib"
+		#}
+		#EOF
+	fi
+
+	echo Running: pyre check
+	time pyre check
+	printf "\n"
+
+	echo Running: pyre analyze
+	time pyre analyze
+	printf "\n"
+} # python_pyre()
+
+python_pyright()
+{
+	local directory
+
+	for directory in "${PYTHON_MODULES[@]}"; do
+		echo Running: pyright --stats "${directory}"
+		time pyright --stats "${directory}"
+		printf "\n"
+	done
+} # python_pyright()
+
+python_pyanalyze()
+{
+	local directory
+
+	for directory in "${PYTHON_MODULES[@]}"; do
+		echo Running: pyanalyze --verbose "${directory}"
+		time pyanalyze --verbose "${directory}"
+		printf "\n"
+	done
+} # python_pyanalyze()
+
+python_pytype()
+{
+	local directory
+
+	for directory in "${PYTHON_MODULES[@]}"; do
+		echo Running: pytype "${directory}"
+		time pytype "${directory}"
+		printf "\n"
+
+		echo Running: pytype ./*[.]py
+		time pytype ./*[.]py
+		printf "\n"
+	done
+} # python_pytype()
+
+python_pytest()
+{
+	 echo Running: pytest --verbose --cov-report term --cov=. --cov-branch
+	 time pytest --verbose --cov-report term --cov=. --cov-branch
+	 printf "\n"
+
+	 echo Running: spackle
+	 time spackle
+	 printf "\n"
+ } # python_pytest()
+
+if [[ ${#PYTHON_FILES[@]} -gt 0 ]]; then
+	printf "\nRunning Python Checks and Tests...\n\n"
+
+	python_mypy "${PYTHON_FILES[@]}" |& tee run-tests-mypy.txt
+	#python_pyre |& tee run-tests-pyre.txt
+	python_pyright |& tee run-tests-pyright.txt
+	python_pyanalyze |& tee run-tests-pyanalyze.txt
+	python_pytype |& tee run-tests-pytype.txt
+	python_pytest |& tee run-tests-pytest.txt
+fi
