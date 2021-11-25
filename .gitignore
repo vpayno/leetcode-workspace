@@ -1,0 +1,10 @@
+*~
+*[.]bak
+*[.]pyc
+*[.]swp
+__pycache__
+.hypothesis
+.mypy_cache
+.pyre
+.pytest_cache
+.pytype
