@@ -1,0 +1,7 @@
+Running: mypy test_two_sum.py ./two_sum
+Success: no issues found in 3 source files
+
+real	0m0.679s
+user	0m0.411s
+sys	0m0.190s
+

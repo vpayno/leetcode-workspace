@@ -1,0 +1,122 @@
+Running: pyre
+
+ƛ No watchman binary found. 
+To enable pyre incremental, you can install watchman: https://facebook.github.io/watchman/docs/install
+
+ƛ Defaulting to non-incremental check.
+
+ƛ No binary specified, looking for `pyre.bin` in PATH
+ƛ Could not determine the number of Pyre workers from configuration. Auto-set the value to 1.
+ƛ No typeshed specified, looking for it...
+ƛ Found: `/home/vpayno/.pyenv/versions/3.9.2/lib/pyre_check/typeshed`
+ƛ Writing arguments into /tmp/pyre_arguments_54go45sx.json...
+ƛ Initializing shared memory [heap_size=8589934592, dep_table_pow=27, hash_table_pow=26]
+ƛ Building module tracker...
+ƛ Building type environment...
+ƛ Parsing 1936 stubs and sources...
+ƛ Parsing 1936 stubs and sources... [0.6s]
+ƛ Parsing 1936 stubs and sources... [0.7s]
+ƛ Parsing 1936 stubs and sources... [0.8s]
+ƛ Parsing 1936 stubs and sources... [0.9s]
+ƛ Parsing 1936 stubs and sources... [1.0s]
+ƛ Parsing 1936 stubs and sources... [1.1s]
+ƛ Parsing 1936 stubs and sources... [1.2s]
+ƛ Parsing 1936 stubs and sources... [1.3s]
+ƛ Parsing 1936 stubs and sources... [1.4s]
+ƛ Parsing 1936 stubs and sources... [1.5s]
+ƛ Parsing 1936 stubs and sources... [1.6s]
+ƛ Parsing 1936 stubs and sources... [1.7s]
+ƛ Parsing 1936 stubs and sources... [1.8s]
+ƛ Parsing 1936 stubs and sources... [1.9s]
+ƛ Parsing 1936 stubs and sources... [2.0s]
+ƛ Parsing 1936 stubs and sources... [2.1s]
+ƛ Parsing 1936 stubs and sources... [2.2s]
+ƛ Parsing 1936 stubs and sources... [2.3s]
+ƛ Parsing 1936 stubs and sources... [2.4s]
+ƛ Parsing 1936 stubs and sources... [2.5s]
+ƛ Parsing 1936 stubs and sources... [2.6s]
+ƛ Parsing 1936 stubs and sources... [2.7s]
+ƛ Parsing 1936 stubs and sources... [2.8s]
+ƛ Parsing 1936 stubs and sources... [2.9s]
+ƛ Parsing 1936 stubs and sources... [3.0s]
+ƛ Parsing 1936 stubs and sources... [3.1s]
+ƛ Parsing 1936 stubs and sources... [3.2s]
+ƛ Parsing 1936 stubs and sources... [3.3s]
+ƛ Parsing 1936 stubs and sources... [3.4s]
+ƛ Parsing 1936 stubs and sources... [3.5s]
+ƛ Parsing 1936 stubs and sources... [3.6s]
+ƛ Parsing 1936 stubs and sources... [3.7s]
+ƛ Parsing 1936 stubs and sources... [3.8s]
+ƛ Parsing 1936 stubs and sources... [3.9s]
+ƛ Parsing 1936 stubs and sources... [4.0s]
+ƛ Parsing 1936 stubs and sources... [4.1s]
+ƛ Parsing 1936 stubs and sources... [4.2s]
+ƛ Parsing 1936 stubs and sources... [4.3s]
+ƛ Parsing 1936 stubs and sources... [4.4s]
+ƛ Parsing 1936 stubs and sources... [4.5s]
+ƛ Parsing 1936 stubs and sources... [4.6s]
+ƛ Parsing 1936 stubs and sources... [4.7s]
+ƛ Parsing 1936 stubs and sources... [4.8s]
+ƛ Parsing 1936 stubs and sources... [4.9s]
+ƛ Parsing 1936 stubs and sources... [5.0s]
+ƛ Parsing 1936 stubs and sources... [5.1s]
+ƛ Parsing 1936 stubs and sources... [5.2s]
+ƛ Parsing 1936 stubs and sources... [5.4s]
+ƛ Parsing 1936 stubs and sources... [5.5s]
+ƛ Parsing 1936 stubs and sources... [5.6s]
+ƛ Parsing 1936 stubs and sources... [5.7s]
+ƛ Parsing 1936 stubs and sources... [5.8s]
+ƛ Parsing 1936 stubs and sources... [5.9s]
+ƛ Parsing 1936 stubs and sources... [6.0s]
+ƛ Parsing 1936 stubs and sources... [6.1s]
+ƛ Parsing 1936 stubs and sources... [6.2s]
+ƛ Parsing 1936 stubs and sources... [6.3s]
+ƛ Parsing 1936 stubs and sources... [6.4s]
+ƛ Parsing 1936 stubs and sources... [6.5s]
+ƛ Parsing 1936 stubs and sources... [6.6s]
+ƛ Parsing 1936 stubs and sources... [6.7s]
+ƛ Parsing 1936 stubs and sources... [6.8s]
+ƛ Parsing 1936 stubs and sources... [6.9s]
+ƛ Parsing 1936 stubs and sources... [7.1s]
+ƛ Parsing 1936 stubs and sources... [7.2s]
+ƛ Parsing 1936 stubs and sources... [7.3s]
+ƛ Parsing 1936 stubs and sources... [7.4s]
+ƛ Parsing 1936 stubs and sources... [7.5s]
+ƛ Parsing 1936 stubs and sources... [7.6s]
+ƛ Parsing 1936 stubs and sources... [7.7s]
+ƛ Parsing 1936 stubs and sources... [7.8s]
+ƛ Parsing 1936 stubs and sources... [7.9s]
+ƛ Parsing 1936 stubs and sources... [8.0s]
+ƛ Parsing 1936 stubs and sources... [8.1s]
+ƛ Parsing 1936 stubs and sources... [8.2s]
+ƛ Parsing 1936 stubs and sources... [8.3s]
+ƛ Parsing 1936 stubs and sources... [8.4s]
+ƛ Parsing 1936 stubs and sources... [8.5s]
+ƛ Parsing 1936 stubs and sources... [8.6s]
+ƛ Parsing 1936 stubs and sources... [8.7s]
+ƛ Parsing 1936 stubs and sources... [8.8s]
+ƛ Parsing 1936 stubs and sources... [8.9s]
+ƛ Parsing 1936 stubs and sources... [9.0s]
+ƛ Parsing 1936 stubs and sources... [9.1s]
+ƛ Parsing 1936 stubs and sources... [9.2s]
+ƛ Parsing 1936 stubs and sources... [9.3s]
+ƛ Parsing 1936 stubs and sources... [9.4s]
+ƛ Checking 9 functions...
+ƛ Processed 9 of 9 functions
+ƛ Postprocessing 1936 sources...
+ƛ Postprocessed 243 of 1936 sources
+ƛ Postprocessed 486 of 1936 sources
+ƛ Postprocessed 729 of 1936 sources
+ƛ Postprocessed 972 of 1936 sources
+ƛ Postprocessed 1215 of 1936 sources
+ƛ Postprocessed 1458 of 1936 sources
+ƛ Postprocessed 1701 of 1936 sources
+ƛ Postprocessed 1936 of 1936 sources
+ƛ Found 1 type error!
+
+test_two_sum.py:15:0 Undefined import [21]: Could not find a module corresponding to import `pytest`.
+
+real	0m12.856s
+user	0m10.062s
+sys	0m2.321s
+

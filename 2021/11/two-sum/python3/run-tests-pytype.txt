@@ -1,0 +1,25 @@
+Running: pytype ./two_sum
+ninja: Entering directory `.pytype'
+[1/1] check two_sum.two_sum
+Computing dependencies
+Analyzing 2 sources with 0 local dependencies
+Leaving directory '.pytype'
+Success: no errors found
+
+real	0m6.074s
+user	0m5.568s
+sys	0m1.112s
+
+Running: pytype ./test_two_sum.py
+ninja: Entering directory `.pytype'
+[1/2] infer two_sum.two_sum
+[2/2] check test_two_sum
+Computing dependencies
+Analyzing 1 sources with 1 local dependencies
+Leaving directory '.pytype'
+Success: no errors found
+
+real	0m11.009s
+user	0m10.706s
+sys	0m1.265s
+

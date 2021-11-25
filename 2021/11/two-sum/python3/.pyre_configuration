@@ -1,0 +1,6 @@
+{
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": "/home/vpayno/.pyenv/versions/3.9.2/lib"
+}

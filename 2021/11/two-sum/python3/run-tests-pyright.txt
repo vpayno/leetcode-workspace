@@ -1,0 +1,28 @@
+Running: pyright --stats ./two_sum
+No configuration file found.
+No pyproject.toml file found.
+stubPath /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/typings is not a valid directory.
+Assuming Python platform Linux
+Searching for source files
+File or directory "/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/--" does not exist.
+Found 2 source files
+0 errors, 0 warnings, 0 infos 
+Completed in 0.992sec
+
+Analysis stats
+Total files analyzed: 18
+
+Timing stats
+Find Source Files:    0sec
+Read Source Files:    0.03sec
+Tokenize:             0.15sec
+Parse:                0.14sec
+Resolve Imports:      0.07sec
+Bind:                 0.09sec
+Check:                0.15sec
+Detect Cycles:        0sec
+
+real	0m3.726s
+user	0m3.153s
+sys	0m0.671s
+
