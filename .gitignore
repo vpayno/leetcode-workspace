@@ -8,3 +8,6 @@ __pycache__
 .pyre
 .pytest_cache
 .pytype
+
+Cargo.lock
+target/
