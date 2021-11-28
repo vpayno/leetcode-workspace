@@ -2,10 +2,18 @@
 
 shopt -s nullglob
 
+declare project_language
+
 declare -a PYTHON_FILES=( *[.]py )
 declare -a PYTHON_MODULES
 
 declare directory
+
+if [[ ${#PYTHON_FILES[@]} -gt 0 ]]; then
+	project_language="python"
+elif [[ -f Cargo.toml ]]; then
+	project_language="rust"
+fi
 
 for directory in ./*; do
 	[[ -d ${directory} ]] || continue
@@ -96,13 +104,72 @@ python_pytest()
 	 printf "\n"
  } # python_pytest()
 
-if [[ ${#PYTHON_FILES[@]} -gt 0 ]]; then
-	printf "\nRunning Python Checks and Tests...\n\n"
+rust_clean()
+{
+	echo cargo clean
+	time cargo clean
+	printf "\n"
 
-	python_mypy "${PYTHON_FILES[@]}" |& tee run-tests-mypy.txt
-	#python_pyre |& tee run-tests-pyre.txt
-	python_pyright |& tee run-tests-pyright.txt
-	python_pyanalyze |& tee run-tests-pyanalyze.txt
-	python_pytype |& tee run-tests-pytype.txt
-	python_pytest |& tee run-tests-pytest.txt
-fi
+	echo cargo clean --release
+	time cargo clean --release
+	printf "\n"
+} # rust_clean()
+
+rust_check()
+{
+	echo cargo check --release
+	time cargo check --release
+	printf "\n"
+} # rust_check()
+
+rust_clippy()
+{
+	# cargo clippy --release --fix --allow-dirty --allow-staged
+
+	echo cargo clippy --release
+	time cargo clippy --release
+	printf "\n"
+} # rust_clippy()
+
+rust_test()
+{
+	echo cargo test --release
+	time cargo test --release
+	printf "\n"
+
+	echo cargo tarpaulin --release --skip-clean --timeout=300 --command=Test
+	time cargo tarpaulin --release --skip-clean --timeout=300 --command=Test
+	printf "\n"
+} # rust_test()
+
+rust_audit()
+{
+	echo cargo audit
+	time cargo audit
+	printf "\n"
+} # rust_audit()
+
+main()
+{
+	if [[ ${project_language} == python ]]; then
+		printf "\nRunning Python Checks and Tests...\n\n"
+
+		python_mypy "${PYTHON_FILES[@]}" |& tee run-tests-mypy.txt
+		#python_pyre |& tee run-tests-pyre.txt
+		python_pyright |& tee run-tests-pyright.txt
+		python_pyanalyze |& tee run-tests-pyanalyze.txt
+		python_pytype |& tee run-tests-pytype.txt
+		python_pytest |& tee run-tests-pytest.txt
+
+	elif [[ ${project_language} == rust ]]; then
+		printf "\nRunning Rust Checks and Tests...\n\n"
+
+		rust_clean
+		rust_check |& tee run-tests-check.txt || exit 1
+		rust_clippy |& tee run-tests-clippy.txt
+		rust_test |& tee run-tests-test.txt
+		rust_audit |& tee run-tests-audit.txt
+	fi
+} # main()
+
+time main
