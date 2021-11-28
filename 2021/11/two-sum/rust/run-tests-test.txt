@@ -1,0 +1,151 @@
+cargo test --release
+   Compiling cfg-if v1.0.0
+   Compiling adler v1.0.2
+   Compiling gimli v0.26.1
+   Compiling lazy_static v1.4.0
+   Compiling smallvec v1.7.0
+   Compiling scopeguard v1.1.0
+   Compiling rustc-demangle v0.1.21
+   Compiling itoa v0.4.8
+   Compiling environment v0.1.1
+   Compiling difference v2.0.0
+   Compiling instant v0.1.12
+   Compiling lock_api v0.4.5
+   Compiling libc v0.2.108
+   Compiling memchr v2.4.1
+   Compiling ryu v1.0.5
+   Compiling serde v1.0.130
+   Compiling miniz_oxide v0.4.4
+   Compiling object v0.27.1
+   Compiling parking_lot_core v0.8.5
+   Compiling atty v0.2.14
+   Compiling addr2line v0.17.0
+   Compiling parking_lot v0.11.2
+   Compiling colored v1.9.3
+   Compiling serde_json v1.0.72
+   Compiling backtrace v0.3.63
+   Compiling serial_test v0.5.1
+   Compiling failure v0.1.8
+   Compiling assert_cli v0.6.3
+   Compiling rust v0.1.0 (/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/rust)
+    Finished release [optimized] target(s) in 42.85s
+     Running unittests (target/release/deps/rust-28a4997dbc35e6cc)
+
+running 10 tests
+test test::test_two_sum_monolith ... ok
+test test::test_two_sum_parameterized::case_1 ... ok
+test test::test_two_sum_parameterized::case_2 ... ok
+test test::test_two_sum_parameterized::case_3 ... ok
+test test::test_two_sum_parameterized::case_4 ... ok
+test test::test_two_sum_parameterized::case_5 ... ok
+test test::test_two_sum_parameterized::case_6 ... ok
+test test::test_two_sum_parameterized::case_7 ... ok
+test test::test_two_sum_parameterized::case_8 ... ok
+test test::test_two_sum_parameterized::case_9 ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (target/release/deps/cli-c3846318d4aa7034)
+
+running 3 tests
+test integration::valid_input ... ok
+test integration::invalid_input ... ok
+test integration::missing_argument ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+
+real	0m43.569s
+user	2m30.653s
+sys	0m14.552s
+
+cargo tarpaulin --release --skip-clean --timeout=300 --command=Test
+[2mNov 28 21:40:34.100[0m [32m INFO[0m cargo_tarpaulin::config: Creating config
+[2mNov 28 21:40:34.176[0m [32m INFO[0m cargo_tarpaulin: Running Tarpaulin
+[2mNov 28 21:40:34.176[0m [32m INFO[0m cargo_tarpaulin: Building project
+   Compiling proc-macro2 v1.0.32
+   Compiling unicode-xid v0.2.2
+   Compiling libc v0.2.108
+   Compiling syn v1.0.82
+   Compiling cfg-if v1.0.0
+   Compiling ucd-trie v0.1.3
+   Compiling memchr v2.4.1
+   Compiling autocfg v1.0.1
+   Compiling cc v1.0.72
+   Compiling parking_lot_core v0.8.5
+   Compiling serde v1.0.130
+   Compiling adler v1.0.2
+   Compiling gimli v0.26.1
+   Compiling failure_derive v0.1.8
+   Compiling ryu v1.0.5
+   Compiling rustc-demangle v0.1.21
+   Compiling serde_json v1.0.72
+   Compiling lazy_static v1.4.0
+   Compiling scopeguard v1.1.0
+   Compiling smallvec v1.7.0
+   Compiling itoa v0.4.8
+   Compiling difference v2.0.0
+   Compiling environment v0.1.1
+   Compiling instant v0.1.12
+   Compiling pest v2.1.3
+   Compiling miniz_oxide v0.4.4
+   Compiling backtrace v0.3.63
+   Compiling lock_api v0.4.5
+   Compiling addr2line v0.17.0
+   Compiling semver-parser v0.10.2
+   Compiling atty v0.2.14
+   Compiling quote v1.0.10
+   Compiling object v0.27.1
+   Compiling semver v0.11.0
+   Compiling parking_lot v0.11.2
+   Compiling colored v1.9.3
+   Compiling rustc_version v0.3.3
+   Compiling rstest v0.7.0
+   Compiling synstructure v0.12.6
+   Compiling serial_test_derive v0.5.1
+   Compiling serial_test v0.5.1
+   Compiling failure v0.1.8
+   Compiling assert_cli v0.6.3
+   Compiling rust v0.1.0 (/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/rust)
+    Finished release [optimized] target(s) in 1m 57s
+[2mNov 28 21:42:31.405[0m [32m INFO[0m cargo_tarpaulin::process_handling::linux: Launching test
+[2mNov 28 21:42:31.405[0m [32m INFO[0m cargo_tarpaulin::process_handling: running /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/rust/target/release/deps/rust-28a4997dbc35e6cc
+
+running 10 tests
+test test::test_two_sum_parameterized::case_3 ... ok
+test test::test_two_sum_parameterized::case_2 ... ok
+test test::test_two_sum_parameterized::case_1 ... ok
+test test::test_two_sum_parameterized::case_6 ... ok
+test test::test_two_sum_parameterized::case_5 ... ok
+test test::test_two_sum_parameterized::case_4 ... ok
+test test::test_two_sum_monolith ... ok
+test test::test_two_sum_parameterized::case_9 ... ok
+test test::test_two_sum_parameterized::case_8 ... ok
+test test::test_two_sum_parameterized::case_7 ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+[2mNov 28 21:42:32.673[0m [32m INFO[0m cargo_tarpaulin::process_handling::linux: Launching test
+[2mNov 28 21:42:32.673[0m [32m INFO[0m cargo_tarpaulin::process_handling: running /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/rust/target/release/deps/cli-c3846318d4aa7034
+
+running 3 tests
+test integration::invalid_input has been running for over 60 seconds
+test integration::missing_argument has been running for over 60 seconds
+test integration::valid_input has been running for over 60 seconds
+test integration::valid_input ... ok
+test integration::missing_argument ... ok
+test integration::invalid_input ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 187.82s
+
+[2mNov 28 21:45:42.399[0m [32m INFO[0m cargo_tarpaulin::report: Coverage Results:
+|| Tested/Total Lines:
+|| src/main.rs: 26/27
+|| tests/cli.rs: 6/9
+|| 
+88.89% coverage, 32/36 lines covered
+
+real	5m8.547s
+user	7m52.148s
+sys	2m3.864s
+
