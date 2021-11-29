@@ -1,0 +1,25 @@
+gosec -tests ./...
+[gosec] 2021/11/28 22:33:48 Including rules: default
+[gosec] 2021/11/28 22:33:48 Excluding rules: default
+[gosec] 2021/11/28 22:33:48 Import directory: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/golang
+[gosec] 2021/11/28 22:33:49 Checking package: main
+[gosec] 2021/11/28 22:33:49 Checking file: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/golang/two_sum.go
+[gosec] 2021/11/28 22:33:49 Checking package: main
+[gosec] 2021/11/28 22:33:49 Checking file: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/golang/two_sum.go
+[gosec] 2021/11/28 22:33:49 Checking file: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/golang/two_sum_test.go
+[gosec] 2021/11/28 22:33:49 Checking package: main
+Results:
+
+
+[1;36mSummary:[0m
+  Gosec  : dev
+  Files  : 3
+  Lines  : 238
+  Nosec  : 0
+  Issues : [1;32m0[0m
+
+
+real	0m0.744s
+user	0m0.670s
+sys	0m0.481s
+

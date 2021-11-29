@@ -1,0 +1,37 @@
+go test -v -cover
+=== RUN   TestMain
+=== RUN   TestMain/testcase1
+nums := [1,2,3,4,5]
+target := 5
+=== RUN   TestMain/testcase2
+nums := [3,3]
+target := 6
+=== RUN   TestMain/testcase3
+nums := [1,2,3]
+target := 7
+--- PASS: TestMain (0.00s)
+    --- PASS: TestMain/testcase1 (0.00s)
+    --- PASS: TestMain/testcase2 (0.00s)
+    --- PASS: TestMain/testcase3 (0.00s)
+=== RUN   TestTwoSum
+=== RUN   TestTwoSum/testcase1
+=== RUN   TestTwoSum/testcase2
+=== RUN   TestTwoSum/testcase3
+=== RUN   TestTwoSum/testcase4
+=== RUN   TestTwoSum/testcase5
+=== RUN   TestTwoSum/testcase6
+--- PASS: TestTwoSum (0.00s)
+    --- PASS: TestTwoSum/testcase1 (0.00s)
+    --- PASS: TestTwoSum/testcase2 (0.00s)
+    --- PASS: TestTwoSum/testcase3 (0.00s)
+    --- PASS: TestTwoSum/testcase4 (0.00s)
+    --- PASS: TestTwoSum/testcase5 (0.00s)
+    --- PASS: TestTwoSum/testcase6 (0.00s)
+PASS
+coverage: 76.9% of statements
+ok  	leetcode/vpayno/two_sum	0.016s
+
+real	0m0.578s
+user	0m0.585s
+sys	0m0.487s
+
