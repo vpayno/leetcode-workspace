@@ -13,6 +13,8 @@ if [[ ${#PYTHON_FILES[@]} -gt 0 ]]; then
 	project_language="python"
 elif [[ -f Cargo.toml ]]; then
 	project_language="rust"
+elif [[ -f go.mod ]]; then
+	project_language="golang"
 fi
 
 for directory in ./*; do
@@ -149,6 +151,41 @@ rust_audit()
 	printf "\n"
 } # rust_audit()
 
+go_clean()
+{
+	echo go clean
+	time go clean
+	printf "\n"
+} # go_clean()
+
+go_build()
+{
+	echo go build
+	time go build
+	printf "\n"
+} # go_build()
+
+go_vet()
+{
+	echo go vet
+	time go vet
+	printf "\n"
+} # go_vet()
+
+go_test()
+{
+	echo go test -v -cover
+	time go test -v -cover
+	printf "\n"
+} # go_test()
+
+go_sec()
+{
+	echo gosec -tests ./...
+	time gosec -tests ./...
+	printf "\n"
+} # go_sec()
+
 main()
 {
 	if [[ ${project_language} == python ]]; then
@@ -169,6 +206,15 @@ main()
 		rust_clippy |& tee run-tests-clippy.txt
 		rust_test |& tee run-tests-test.txt
 		rust_audit |& tee run-tests-audit.txt
+
+	elif [[ ${project_language} == golang ]]; then
+		printf "\nRunning Go Checks and Tests...\n\n"
+
+		go_clean
+		go_build |& tee run-tests-build.txt || exit 1
+		go_vet |& tee run-tests-vet.txt || exit 1
+		go_test |& tee run-tests-test.txt
+		go_sec |& tee run-tests-sec.txt
 	fi
 } # main()
 
