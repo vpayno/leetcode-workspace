@@ -95,6 +95,13 @@ func TestTwoSum(t *testing.T) {
 				target: 7,
 			},
 			expect: []int{},
+		}, {
+			name: "testcase7",
+			args: args{
+				nums:   []int{3, 4, 1, 7, 5},
+				target: 11,
+			},
+			expect: []int{},
 		},
 	}
 

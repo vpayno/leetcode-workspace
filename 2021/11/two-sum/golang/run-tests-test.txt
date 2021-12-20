@@ -20,6 +20,7 @@ target := 7
 === RUN   TestTwoSum/testcase4
 === RUN   TestTwoSum/testcase5
 === RUN   TestTwoSum/testcase6
+=== RUN   TestTwoSum/testcase7
 --- PASS: TestTwoSum (0.00s)
     --- PASS: TestTwoSum/testcase1 (0.00s)
     --- PASS: TestTwoSum/testcase2 (0.00s)
@@ -27,11 +28,12 @@ target := 7
     --- PASS: TestTwoSum/testcase4 (0.00s)
     --- PASS: TestTwoSum/testcase5 (0.00s)
     --- PASS: TestTwoSum/testcase6 (0.00s)
+    --- PASS: TestTwoSum/testcase7 (0.00s)
 PASS
 coverage: 76.9% of statements
-ok  	leetcode/vpayno/two_sum	0.016s
+ok  	leetcode/vpayno/two_sum	0.015s
 
-real	0m0.578s
-user	0m0.585s
-sys	0m0.487s
+real	0m1.672s
+user	0m1.882s
+sys	0m1.246s
 
