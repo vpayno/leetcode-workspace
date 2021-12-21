@@ -1,12 +1,14 @@
 import java.util.Arrays;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
-// import org.junit.platform.*;
+import static org.junit.Assert.assertTrue;
 
-class TestTwoSum {
+import org.junit.Test;
 
-	@Test
+public class TwoSumTest {
+
+	public TwoSumTest() {
+	}
+
 	void testTwoSum(String name, int[] nums, int target, int[] expected) {
 		int[] result;
 
@@ -22,13 +24,14 @@ class TestTwoSum {
 		System.out.println();
 	}
 
-	public static void main(String[] args) {
+	@Test
+	public void testTwoSum() {
 		int[] nums;
 		int target;
 		int[] expected;
 		String name;
 
-		TestTwoSum test = new TestTwoSum();
+		TwoSumTest test = new TwoSumTest();
 
 		try {
 			name = new String("testcase1");
@@ -55,7 +58,7 @@ class TestTwoSum {
 			expected = new int[]{2, 3};
 			test.testTwoSum(name, nums, target, expected);
 		}
-		catch(org.opentest4j.AssertionFailedError e) {
+		catch(Exception e) {
 			System.err.println(e);
 		}
 	}

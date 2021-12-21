@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare project_type="${PWD##*/}"
+
+declare project_name
+project_name="${PWD%%/${project_type}}"
+project_name="${project_name##*/}"
+project_name="${project_name//-/_}"
+
+if [[ ${project_type} == "java" ]]; then
+	echo mvn archetype:generate "-DgroupId=solution.${project_name}" "-DartifactId=solution.${project_name}" -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false "-DarchetypeVersion=1.${MY_JAVA_VERSION:-17}"
+	time mvn archetype:generate "-DgroupId=solution.${project_name}" "-DartifactId=solution.${project_name}" -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false "-DarchetypeVersion=1.${MY_JAVA_VERSION:-17}"
+fi
