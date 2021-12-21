@@ -11,3 +11,6 @@ __pycache__
 
 Cargo.lock
 target/
+
+*.class
+*.jar
