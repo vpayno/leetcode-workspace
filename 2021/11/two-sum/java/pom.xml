@@ -14,6 +14,7 @@
     <maven.compiler.target>1.17</maven.compiler.target>
     <maven.compiler.release>17</maven.compiler.release>
     <jdk.version>1.17</jdk.version>
+    <dependency-check-maven.version>5.3.0</dependency-check-maven.version>
   </properties>
 
   <dependencies>
@@ -132,4 +133,28 @@
     </pluginManagement>
   </build>
   <url>https://leetcode.com/problems/two-sum/</url>
+  <profiles>
+    <profile>
+      <id>owasp-dependency-check</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>6.5.1</version>
+            <configuration>
+              <failBuildOnCVSS>7</failBuildOnCVSS>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
