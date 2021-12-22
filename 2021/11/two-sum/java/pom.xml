@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>solution.two_sum</groupId>
@@ -9,26 +7,27 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>solution.two_sum</name>
-  <url>https://leetcode.com/problems/two-sum/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.17</maven.compiler.source>
     <maven.compiler.target>1.17</maven.compiler.target>
     <maven.compiler.release>17</maven.compiler.release>
+    <jdk.version>1.17</jdk.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
+      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -47,6 +46,66 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <executions>
+            <execution>
+              <id>default-test</id>
+              <goals>
+                <goal>test</goal>
+              </goals>
+              <phase>test</phase>
+              <configuration>
+                <systemPropertyVariables>
+                  <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+                </systemPropertyVariables>
+                <forkMode>once</forkMode>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.7</version>
+          <configuration>
+            <excludes>
+              <exclude>com/wdpr/payment/data/mapper/*.class</exclude>
+              <exclude>**/*AjcClosure?.class</exclude>
+            </excludes>
+          </configuration>
+          <executions>
+            <execution>
+              <id>default-instrument</id>
+              <goals>
+                <goal>instrument</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>default-restore-instrumented-classes</id>
+              <goals>
+                <goal>restore-instrumented-classes</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>default-report</id>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <phase>prepare-package</phase>
+            </execution>
+            <execution>
+              <id>default-check</id>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <rule>
+                    <element>METHOD</element>
+                  </rule>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -72,4 +131,5 @@
       </plugins>
     </pluginManagement>
   </build>
+  <url>https://leetcode.com/problems/two-sum/</url>
 </project>

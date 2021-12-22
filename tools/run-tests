@@ -15,6 +15,8 @@ elif [[ -f Cargo.toml ]]; then
 	project_language="rust"
 elif [[ -f go.mod ]]; then
 	project_language="golang"
+elif [[ -f pom.xml ]]; then
+	project_language="java"
 fi
 
 for directory in ./*; do
@@ -186,6 +188,48 @@ go_sec()
 	printf "\n"
 } # go_sec()
 
+mvn_maintenance()
+{
+	mvn_update_versions
+	mvn_sort_pom
+} # mvn_maintenance()
+
+mvn_update_versions()
+{
+	echo mvn versions:use-latest-releases
+	time mvn versions:use-latest-releases
+	printf "\n"
+} # mvn_update_versions()
+
+mvn_clean()
+{
+	echo mvn clean
+	time mvn clean
+	printf "\n"
+} # mvn_clean()
+
+mvn_sort_pom()
+{
+	echo mvn com.github.ekryd.sortpom:sortpom-maven-plugin:sort -Dsort.keepBlankLines -Dsort.predefinedSortOrder=custom_1
+	time mvn com.github.ekryd.sortpom:sortpom-maven-plugin:sort -Dsort.keepBlankLines -Dsort.predefinedSortOrder=custom_1
+	printf "\n"
+} # mvn_sort_pom()
+
+mvn_get_coverage()
+{
+	sed -r -e '/Total/ s/.*([0-9]+%).*([0-9]+%).*/  Total Line Coverage: \1\nTotal Branch Coverage: \2/g' target/site/jacoco/index.html
+	printf "\n"
+} # mvn_get_coverage()
+
+mvn_test()
+{
+	echo mvn clean jacoco:prepare-agent verify jacoco:report
+	time mvn clean jacoco:prepare-agent verify jacoco:report
+	printf "\n"
+
+	mvn_get_coverage
+} # mvn_test()
+
 main()
 {
 	if [[ ${project_language} == python ]]; then
@@ -215,6 +259,13 @@ main()
 		go_vet |& tee run-tests-vet.txt || exit 1
 		go_test |& tee run-tests-test.txt
 		go_sec |& tee run-tests-sec.txt
+
+	elif [[ ${project_language} == java ]]; then
+		printf "\nRunning Java Checks and Tests...\n\n"
+
+		mvn_clean
+		mvn_maintenance
+		mvn_test |& run-tests.txt
 	fi
 } # main()
 

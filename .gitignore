@@ -14,3 +14,5 @@ target/
 
 *.class
 *.jar
+pom.xml[.]*
+./coverage/jacoco.exec
