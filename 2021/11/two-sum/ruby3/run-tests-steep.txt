@@ -1,0 +1,11 @@
+[steep check]
+# Type checking files:
+
+
+
+No type error detected. 🍵
+
+real	0m15.428s
+user	0m24.586s
+sys	0m12.301s
+

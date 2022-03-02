@@ -1,0 +1,14 @@
+# https://leetcode.com/problems/two-sum/
+# 
+# Author: Victor Payno (https://github.com/vpayno)
+class Solution
+  def initialize: () -> void
+
+  # _@param_ `nums`
+  # 
+  # _@param_ `target`
+  def two_sum: (Symbol nums, Integer target) -> Symbol
+
+  # _@param_ `args`
+  def main: (Symbol args) -> Integer
+end

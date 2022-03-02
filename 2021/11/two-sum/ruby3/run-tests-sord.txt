@@ -1,0 +1,16 @@
+[find . -type f -name '*.rbs' -print -exec sord --rbs {} \;]
+./lib/two_sum.rbs
+[INFO ] Running YARD...
+Files:           1
+Modules:         0 (    0 undocumented)
+Classes:         1 (    0 undocumented)
+Constants:       0 (    0 undocumented)
+Attributes:      0 (    0 undocumented)
+Methods:         3 (    0 undocumented)
+ 100.00% documented
+[DONE ] Processed 4 objects (1 namespaces and 3 methods)
+
+real	0m6.367s
+user	0m5.087s
+sys	0m1.271s
+

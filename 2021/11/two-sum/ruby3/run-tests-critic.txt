@@ -1,0 +1,39 @@
+[rubycritic --no-browser --format console]
+running flay smells
+
+running flog smells
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running reek smells
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running complexity
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running attributes
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running churn
+/home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:224:in `build_lines': no implicit conversion of String into Integer (TypeError)
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:43:in `lines'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:241:in `lines_strength'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:333:in `line_coverage_statistics'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:35:in `coverage_statistics'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/simplecov-0.21.2/lib/simplecov/source_file.rb:81:in `covered_percent'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers/coverage.rb:38:in `find_coverage_percentage'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers/coverage.rb:21:in `block in run'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/core/analysed_modules_collection.rb:32:in `each'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/core/analysed_modules_collection.rb:32:in `each'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers/coverage.rb:20:in `run'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers_runner.rb:32:in `block in run'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers_runner.rb:29:in `each'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/analysers_runner.rb:29:in `run'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/commands/default.rb:24:in `critique'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/commands/default.rb:19:in `execute'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/lib/rubycritic/cli/application.rb:21:in `execute'
+	from /home/vpayno/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rubycritic-4.6.1/bin/rubycritic:10:in `<top (required)>'
+	from /home/vpayno/.rbenv/versions/3.1.1/bin/rubycritic:25:in `load'
+	from /home/vpayno/.rbenv/versions/3.1.1/bin/rubycritic:25:in `<main>'
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running simple_cov
+
+real	0m10.719s
+user	0m9.055s
+sys	0m1.655s
+
