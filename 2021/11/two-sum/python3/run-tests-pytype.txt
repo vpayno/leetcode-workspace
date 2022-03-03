@@ -1,25 +1,28 @@
 Running: pytype ./two_sum
-ninja: Entering directory `.pytype'
-[1/1] check two_sum.two_sum
+ninja: Entering directory `/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype'
+[1/2] check two_sum.two_sum
+FAILED: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/pyi/two_sum/two_sum.pyi 
+/home/vpayno/.pyenv/versions/3.10.2/bin/python -m pytype.single --imports_info /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/imports/two_sum.two_sum.imports --module-name two_sum.two_sum -V 3.10 -o /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/pyi/two_sum/two_sum.pyi --analyze-annotated --nofail --quick /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/two_sum/two_sum.py
+Python versions > 3.7 are not yet supported.
+ninja: build stopped: subcommand failed.
 Computing dependencies
 Analyzing 2 sources with 0 local dependencies
-Leaving directory '.pytype'
-Success: no errors found
 
-real	0m6.074s
-user	0m5.568s
-sys	0m1.112s
+real	0m5.008s
+user	0m2.907s
+sys	0m1.067s
 
 Running: pytype ./test_two_sum.py
-ninja: Entering directory `.pytype'
+ninja: Entering directory `/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype'
 [1/2] infer two_sum.two_sum
-[2/2] check test_two_sum
+FAILED: /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/pyi/two_sum/two_sum.pyi 
+/home/vpayno/.pyenv/versions/3.10.2/bin/python -m pytype.single --imports_info /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/imports/two_sum.two_sum.imports --module-name two_sum.two_sum -V 3.10 -o /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/.pytype/pyi/two_sum/two_sum.pyi --no-report-errors --nofail --quick /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/two_sum/two_sum.py
+Python versions > 3.7 are not yet supported.
+ninja: build stopped: subcommand failed.
 Computing dependencies
 Analyzing 1 sources with 1 local dependencies
-Leaving directory '.pytype'
-Success: no errors found
 
-real	0m11.009s
-user	0m10.706s
-sys	0m1.265s
+real	0m4.824s
+user	0m3.939s
+sys	0m0.828s
 

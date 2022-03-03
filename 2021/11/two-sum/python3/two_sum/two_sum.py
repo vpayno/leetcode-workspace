@@ -24,29 +24,27 @@ class Solution:
         self.debug = debug
 
     def two_sum(self, nums: List[int], target: int) -> List[int]:
-        """ Finds two numbers in a list who's sum equals target. """
+        """Finds two numbers in a list who's sum equals target."""
 
-        num1: int
-        num2: int
-        test_sum: int
+        compliment: int
+        key: int
+        value: int
 
-        for num1 in nums:
-            for num2 in nums[nums.index(num1) + 1:]:
-                if self.debug:
-                    print(f"{num1} + {num2} = {num1 + num2} == {target}")
+        hashmap = {}
 
-                test_sum = num1 + num2
+        for key, value in enumerate(nums):
+            hashmap[nums[key]] = key
 
-                if test_sum == target:
-                    print("Found solution.")
-                    return [
-                        nums.index(num1),
-                        nums[nums.index(num1) + 1:].index(num2) +
-                        nums.index(num1) + 1,
-                    ]
+        for key, value in enumerate(nums):
+            compliment = target - value
+
+            if compliment in hashmap and hashmap[compliment] != key:
+                print("Found solution.")
+                return [key, hashmap[compliment]]
 
         if self.debug:
             print("No solution.")
+
         return []
 
     def __str__(self):

@@ -1,28 +1,28 @@
 Running: pyright --stats ./two_sum
+ * Install prebuilt node (17.6.0) ..... done.
 No configuration file found.
 No pyproject.toml file found.
 stubPath /home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/typings is not a valid directory.
 Assuming Python platform Linux
 Searching for source files
-File or directory "/home/vpayno/git_vpayno/leetcode-workspace/2021/11/two-sum/python3/--" does not exist.
 Found 2 source files
-0 errors, 0 warnings, 0 infos 
-Completed in 0.992sec
+0 errors, 0 warnings, 0 informations 
+Completed in 3.496sec
 
 Analysis stats
-Total files analyzed: 18
+Total files analyzed: 20
 
 Timing stats
-Find Source Files:    0sec
+Find Source Files:    0.02sec
 Read Source Files:    0.03sec
-Tokenize:             0.15sec
-Parse:                0.14sec
-Resolve Imports:      0.07sec
-Bind:                 0.09sec
-Check:                0.15sec
+Tokenize:             0.43sec
+Parse:                0.63sec
+Resolve Imports:      0.27sec
+Bind:                 0.64sec
+Check:                0.58sec
 Detect Cycles:        0sec
 
-real	0m3.726s
-user	0m3.153s
-sys	0m0.671s
+real	1m0.531s
+user	0m48.450s
+sys	0m15.464s
 

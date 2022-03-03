@@ -1,10 +1,10 @@
 Running: pyanalyze --verbose ./two_sum
-Checking file: ('./two_sum/__init__.py', 6967)
+Checking file: ('./two_sum/__init__.py', 16077)
 ./two_sum/__init__.py took 0.00 s
-Checking file: ('./two_sum/two_sum.py', 6967)
-./two_sum/two_sum.py took 0.17 s
+Checking file: ('./two_sum/two_sum.py', 16077)
+./two_sum/two_sum.py took 0.75 s
 
-real	0m1.199s
-user	0m0.724s
-sys	0m0.199s
+real	0m3.472s
+user	0m2.224s
+sys	0m0.472s
 
