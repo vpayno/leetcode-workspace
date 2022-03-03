@@ -17,6 +17,8 @@ elif [[ -f go.mod ]]; then
 	project_language="golang"
 elif [[ -f pom.xml ]]; then
 	project_language="java"
+elif [[ -f spec/spec_helper.rb ]]; then
+	project_language="ruby"
 fi
 
 for directory in ./*; do
@@ -230,6 +232,69 @@ mvn_test()
 	mvn_get_coverage
 } # mvn_test()
 
+ruby_tests()
+{
+	echo "[rspec spec --format documentation]"
+	time rspec spec --format documentation
+	printf "\n"
+} # ruby_tests()
+
+ruby_audit()
+{
+	echo "[bundle-audit check]"
+	time bundle-audit check
+	printf "\n"
+} # ruby_audit()
+
+ruby_rubocop()
+{
+	echo "[rubocop]"
+	time rubocop
+	printf "\n"
+} # ruby_rubocop()
+
+ruby_reek()
+{
+	echo "[reek]"
+	time reek
+	printf "\n"
+} # ruby_reek()
+
+ruby_critic()
+{
+	echo "[rubycritic --no-browser --format console]"
+	time rubycritic --no-browser --format console
+	printf "\n"
+} # ruby_critic()
+
+ruby_flog()
+{
+	echo "[flog --all --blame --details]"
+	time flog --all --blame --details
+	printf "\n"
+} # ruby_flog()
+
+ruby_flay()
+{
+	echo "[flay --verbose]"
+	time flay --verbose
+	printf "\n"
+} # ruby_flay()
+
+ruby_steep()
+{
+	echo "[steep check]"
+	time steep check
+	printf "\n"
+} # ruby_steep()
+
+ruby_sord()
+{
+	echo "[find . -type f -name '*.rbs' -print -exec sord --rbs {} \;]"
+	time find . -type f -name '*.rbs' -print -exec sord --rbs {} \;
+	printf "\n"
+} # ruby_sord()
+
 main()
 {
 	if [[ ${project_language} == python ]]; then
@@ -266,6 +331,17 @@ main()
 		mvn_clean
 		mvn_maintenance
 		mvn_test |& run-tests.txt
+
+	elif [[ ${project_language} == ruby ]]; then
+		printf "\nRunning Ruby Checks and Tests...\n\n"
+
+		ruby_critic |& tee run-tests-critic.txt
+		ruby_reek |& tee run-tests-reek.txt
+		ruby_rubocop |& tee run-tests-rubocop.txt
+		ruby_audit |& tee run-tests-audit.txt
+		ruby_steep |& tee run-tests-steep.txt
+		ruby_sord |& tee run-tests-sord.txt
+		ruby_tests |& tee run-tests-tests.txt
 	fi
 } # main()
 
