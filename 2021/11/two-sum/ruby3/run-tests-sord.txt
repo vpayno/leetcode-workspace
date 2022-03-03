@@ -10,7 +10,7 @@ Methods:         3 (    0 undocumented)
  100.00% documented
 [DONE ] Processed 4 objects (1 namespaces and 3 methods)
 
-real	0m5.683s
-user	0m4.245s
-sys	0m1.284s
+real	0m4.611s
+user	0m3.631s
+sys	0m1.025s
 

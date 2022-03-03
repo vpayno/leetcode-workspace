@@ -33,7 +33,7 @@ running churn
 [32m.[0m[32m.[0m[32m.[0m[32m.[0m
 running simple_cov
 
-real	0m11.347s
-user	0m9.494s
-sys	0m1.849s
+real	0m12.123s
+user	0m10.332s
+sys	0m1.868s
 

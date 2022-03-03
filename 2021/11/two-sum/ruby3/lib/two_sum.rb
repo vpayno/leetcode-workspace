@@ -18,24 +18,20 @@ class Solution
   def two_sum(nums, target)
     nums_length = nums.length
 
+    hashmap = {}
+
     for i in 0..(nums_length - 1)
-      num1 = nums[i]
-      nums_index1 = nums.find_index(num1)
+      hashmap[nums[i]] = i
+    end
 
-      for j in (nums_index1 + 1)..(nums_length - 1)
-        num2 = nums[j]
+    for i in 0..(nums_length - 1)
+      compliment = target - nums[i]
 
-        test_sum = num1 + num2
-
-        # uncovered
-        puts format("%s + %s = %s == %s\n", num1, num2, num1 + num2, target) if @debug
-
-        if test_sum == target
-          return [
-                   nums_index1,
-                   nums[nums_index1 + 1, nums_length].find_index(num2) + nums_index1 + 1,
-                 ]
-        end
+      if hashmap.key?(compliment) && hashmap[compliment] != i
+        return [
+                 i,
+                 hashmap[compliment],
+               ]
       end
     end
 

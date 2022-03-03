@@ -3,9 +3,9 @@
 
 
 
-No type error detected. 🫖
+No type error detected. 🧉
 
-real	0m13.172s
-user	0m17.776s
-sys	0m8.824s
+real	0m10.937s
+user	0m21.043s
+sys	0m10.634s
 

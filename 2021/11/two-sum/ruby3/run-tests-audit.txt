@@ -1,7 +1,7 @@
 [bundle-audit check]
 No vulnerabilities found
 
-real	0m1.859s
-user	0m1.331s
-sys	0m0.413s
+real	0m1.439s
+user	0m1.104s
+sys	0m0.323s
 
