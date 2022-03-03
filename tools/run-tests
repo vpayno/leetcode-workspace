@@ -232,6 +232,13 @@ mvn_test()
 	mvn_get_coverage
 } # mvn_test()
 
+mvn_dep_check()
+{
+	echo mvn verify -Powasp-dependency-check
+	time mvn verify -Powasp-dependency-check
+	printf "\n"
+} # mvn_dep_check()
+
 ruby_tests()
 {
 	echo "[rspec spec --format documentation]"
@@ -330,7 +337,8 @@ main()
 
 		mvn_clean
 		mvn_maintenance
-		mvn_test |& run-tests.txt
+		mvn_test |& tee run-tests-test.txt
+		mvn_dep_check |& tee run-tests-depcheck.txt
 
 	elif [[ ${project_language} == ruby ]]; then
 		printf "\nRunning Ruby Checks and Tests...\n\n"
