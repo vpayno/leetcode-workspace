@@ -29,100 +29,103 @@ class Solution
 lib/two_sum.rb:11:17: C: [Correctable] Style/DefWithParentheses: Omit the parentheses in defs when the method doesn't accept any arguments.
   def initialize()
                 ^
-lib/two_sum.rb:18:3: C: Metrics/MethodLength: Method has too many lines. [15/10]
+lib/two_sum.rb:18:3: C: Metrics/AbcSize: Assignment Branch Condition size for two_sum is too high. [<9, 16, 5> 19.03/17]
   def two_sum(nums, target) ...
   ^^^^^^^^^^^^^^^^^^^^^^^^^
-lib/two_sum.rb:20:15: C: [Correctable] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
-    nums.each { |num1|
-              ^
-lib/two_sum.rb:22:47: C: [Correctable] Style/BlockDelimiters: Avoid using {...} for multi-line blocks.
-      nums[nums_index1 + 1, nums_length].each { |num2|
-                                              ^
-lib/two_sum.rb:26:22: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
+lib/two_sum.rb:18:3: C: Metrics/MethodLength: Method has too many lines. [17/10]
+  def two_sum(nums, target) ...
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/two_sum.rb:21:5: C: [Correctable] Style/For: Prefer each over for.
+    for i in 0..(nums_length - 1) ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/two_sum.rb:25:7: C: [Correctable] Style/For: Prefer each over for.
+      for j in (nums_index1 + 1)..(nums_length - 1) ...
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/two_sum.rb:31:22: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
         puts format("%s + %s = %s == %s\n", num1, num2, num1 + num2, target) if @debug
                      ^^
-lib/two_sum.rb:26:27: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
+lib/two_sum.rb:31:27: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
         puts format("%s + %s = %s == %s\n", num1, num2, num1 + num2, target) if @debug
                           ^^
-lib/two_sum.rb:26:32: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
+lib/two_sum.rb:31:32: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
         puts format("%s + %s = %s == %s\n", num1, num2, num1 + num2, target) if @debug
                                ^^
-lib/two_sum.rb:26:38: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
+lib/two_sum.rb:31:38: C: Style/FormatStringToken: Prefer annotated tokens (like %<foo>s) over unannotated tokens (like %s).
         puts format("%s + %s = %s == %s\n", num1, num2, num1 + num2, target) if @debug
                                      ^^
-lib/two_sum.rb:30:20: C: [Correctable] Layout/FirstArrayElementIndentation: Use 2 spaces for indentation in an array, relative to the start of the line where the left square bracket is.
+lib/two_sum.rb:35:20: C: [Correctable] Layout/FirstArrayElementIndentation: Use 2 spaces for indentation in an array, relative to the start of the line where the left square bracket is.
                    nums_index1,
                    ^^^^^^^^^^^
-lib/two_sum.rb:31:89: C: [Correctable] Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.
+lib/two_sum.rb:36:89: C: [Correctable] Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.
                    nums[nums_index1 + 1, nums_length].find_index(num2) + nums_index1 + 1,
                                                                                         ^
-lib/two_sum.rb:32:18: C: [Correctable] Layout/FirstArrayElementIndentation: Indent the right bracket the same as the start of the line where the left bracket is.
+lib/two_sum.rb:37:18: C: [Correctable] Layout/FirstArrayElementIndentation: Indent the right bracket the same as the start of the line where the left bracket is.
                  ]
                  ^
-lib/two_sum.rb:38:7: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
+lib/two_sum.rb:43:7: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
   end # two_sum()
       ^^^^^^^^^^^
-lib/two_sum.rb:42:3: C: Metrics/AbcSize: Assignment Branch Condition size for main is too high. [<3, 30, 15> 33.67/17]
+lib/two_sum.rb:47:3: C: Metrics/AbcSize: Assignment Branch Condition size for main is too high. [<3, 30, 15> 33.67/17]
   def main(args) ...
   ^^^^^^^^^^^^^^
-lib/two_sum.rb:42:3: C: Metrics/CyclomaticComplexity: Cyclomatic complexity for main is too high. [11/7]
+lib/two_sum.rb:47:3: C: Metrics/CyclomaticComplexity: Cyclomatic complexity for main is too high. [11/7]
   def main(args) ...
   ^^^^^^^^^^^^^^
-lib/two_sum.rb:42:3: C: Metrics/MethodLength: Method has too many lines. [22/10]
+lib/two_sum.rb:47:3: C: Metrics/MethodLength: Method has too many lines. [22/10]
   def main(args) ...
   ^^^^^^^^^^^^^^
-lib/two_sum.rb:42:3: C: Metrics/PerceivedComplexity: Perceived complexity for main is too high. [14/8]
+lib/two_sum.rb:47:3: C: Metrics/PerceivedComplexity: Perceived complexity for main is too high. [14/8]
   def main(args) ...
   ^^^^^^^^^^^^^^
-lib/two_sum.rb:44:9: C: [Correctable] Layout/IndentationWidth: Use 2 (not -16) spaces for indentation.
+lib/two_sum.rb:49:9: C: [Correctable] Layout/IndentationWidth: Use 2 (not -16) spaces for indentation.
         [] ...
         ^^
-lib/two_sum.rb:45:7: C: [Correctable] Layout/ElseAlignment: Align else with if.
+lib/two_sum.rb:50:7: C: [Correctable] Layout/ElseAlignment: Align else with if.
       else
       ^^^^
-lib/two_sum.rb:46:23: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+lib/two_sum.rb:51:23: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
         args[0].split(" ").reject(&:empty?).map(&:to_i)
                       ^^^
-lib/two_sum.rb:47:7: W: [Correctable] Layout/EndAlignment: end at 47, 6 is not aligned with if at 43, 24.
+lib/two_sum.rb:52:7: W: [Correctable] Layout/EndAlignment: end at 52, 6 is not aligned with if at 48, 24.
       end
       ^^^
-lib/two_sum.rb:50:9: C: [Correctable] Layout/IndentationWidth: Use 2 (not -12) spaces for indentation.
+lib/two_sum.rb:55:9: C: [Correctable] Layout/IndentationWidth: Use 2 (not -12) spaces for indentation.
         0 ...
         ^
-lib/two_sum.rb:51:7: C: [Correctable] Layout/ElseAlignment: Align else with if.
+lib/two_sum.rb:56:7: C: [Correctable] Layout/ElseAlignment: Align else with if.
       else
       ^^^^
-lib/two_sum.rb:53:7: W: [Correctable] Layout/EndAlignment: end at 53, 6 is not aligned with if at 49, 20.
+lib/two_sum.rb:58:7: W: [Correctable] Layout/EndAlignment: end at 58, 6 is not aligned with if at 54, 20.
       end
       ^^^
-lib/two_sum.rb:56:5: C: [Correctable] Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
+lib/two_sum.rb:61:5: C: [Correctable] Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
     $stderr.puts("ERROR: the search candidate list needs at least two numbers in it.\n") if search_candidates.length < 2
     ^^^^^^^^^^^^
-lib/two_sum.rb:63:14: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+lib/two_sum.rb:68:14: C: [Correctable] Style/RedundantSelf: Redundant self detected.
     result = self.two_sum(search_candidates, search_target) if search_candidates && search_target
              ^^^^
-lib/two_sum.rb:66:121: C: [Correctable] Layout/LineLength: Line is too long. [144/120]
+lib/two_sum.rb:71:121: C: [Correctable] Layout/LineLength: Line is too long. [144/120]
       puts format("%<num1>s + %<num2>s = %<sum>s\n", num1: search_candidates[result[0]], num2: search_candidates[result[1]], sum: search_target)
                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
-lib/two_sum.rb:67:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+lib/two_sum.rb:72:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
       return 0
       ^^^^^^
-lib/two_sum.rb:70:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+lib/two_sum.rb:75:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
       return 1
       ^^^^^^
-lib/two_sum.rb:72:7: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
+lib/two_sum.rb:77:7: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
   end # main()
       ^^^^^^^^
-lib/two_sum.rb:73:5: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
+lib/two_sum.rb:78:5: C: [Correctable] Style/CommentedKeyword: Do not place comments on the same line as the end keyword.
 end # class Solution
     ^^^^^^^^^^^^^^^^
-lib/two_sum.rb:76:21: C: [Correctable] Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+lib/two_sum.rb:81:21: C: [Correctable] Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
   app = Solution.new()  # uncovered
                     ^^
-lib/two_sum.rb:76:23: C: [Correctable] Layout/ExtraSpacing: Unnecessary spacing detected.
+lib/two_sum.rb:81:23: C: [Correctable] Layout/ExtraSpacing: Unnecessary spacing detected.
   app = Solution.new()  # uncovered
                       ^
-lib/two_sum.rb:77:26: C: [Correctable] Layout/ExtraSpacing: Unnecessary spacing detected.
+lib/two_sum.rb:82:26: C: [Correctable] Layout/ExtraSpacing: Unnecessary spacing detected.
   status = app.main(ARGV)  # uncovered
                          ^
 spec/coverage_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
@@ -234,9 +237,9 @@ spec/two_sum_spec.rb:93:25: C: [Correctable] Style/MethodCallWithoutArgsParenthe
       app = Solution.new()
                         ^^
 
-6 files inspected, 77 offenses detected, 66 offenses auto-correctable
+6 files inspected, 78 offenses detected, 66 offenses auto-correctable
 
-real	3m5.926s
-user	0m4.202s
-sys	0m1.299s
+real	0m6.485s
+user	0m5.903s
+sys	0m1.946s
 

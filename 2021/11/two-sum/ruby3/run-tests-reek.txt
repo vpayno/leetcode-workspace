@@ -1,21 +1,22 @@
 [reek]
-lib/two_sum.rb -- 13 warnings:
-  [43, 43, 46]:DuplicateMethodCall: Solution#main calls 'args[0]' 3 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
-  [49, 49, 52]:DuplicateMethodCall: Solution#main calls 'args[1]' 3 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
-  [23, 26]:DuplicateMethodCall: Solution#two_sum calls 'num1 + num2' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
-  [22, 31]:DuplicateMethodCall: Solution#two_sum calls 'nums[nums_index1 + 1, nums_length]' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
-  [22, 31]:DuplicateMethodCall: Solution#two_sum calls 'nums_index1 + 1' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
-  [19, 20, 21, 22, 31]:FeatureEnvy: Solution#two_sum refers to 'nums' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.1.0/docs/Feature-Envy.md]
-  [22]:NestedIterators: Solution#two_sum contains iterators nested 2 deep [https://github.com/troessner/reek/blob/v6.1.0/docs/Nested-Iterators.md]
-  [43, 49]:NilCheck: Solution#main performs a nil-check [https://github.com/troessner/reek/blob/v6.1.0/docs/Nil-Check.md]
-  [42]:TooManyStatements: Solution#main has approx 13 statements [https://github.com/troessner/reek/blob/v6.1.0/docs/Too-Many-Statements.md]
+lib/two_sum.rb -- 14 warnings:
+  [48, 48, 51]:DuplicateMethodCall: Solution#main calls 'args[0]' 3 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
+  [54, 54, 57]:DuplicateMethodCall: Solution#main calls 'args[1]' 3 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
+  [28, 31]:DuplicateMethodCall: Solution#two_sum calls 'num1 + num2' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
+  [25, 36]:DuplicateMethodCall: Solution#two_sum calls 'nums_index1 + 1' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
+  [21, 25]:DuplicateMethodCall: Solution#two_sum calls 'nums_length - 1' 2 times [https://github.com/troessner/reek/blob/v6.1.0/docs/Duplicate-Method-Call.md]
+  [19, 22, 23, 26, 36]:FeatureEnvy: Solution#two_sum refers to 'nums' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.1.0/docs/Feature-Envy.md]
+  [48, 54]:NilCheck: Solution#main performs a nil-check [https://github.com/troessner/reek/blob/v6.1.0/docs/Nil-Check.md]
+  [47]:TooManyStatements: Solution#main has approx 13 statements [https://github.com/troessner/reek/blob/v6.1.0/docs/Too-Many-Statements.md]
   [18]:TooManyStatements: Solution#two_sum has approx 8 statements [https://github.com/troessner/reek/blob/v6.1.0/docs/Too-Many-Statements.md]
-  [20]:UncommunicativeVariableName: Solution#two_sum has the variable name 'num1' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
-  [22]:UncommunicativeVariableName: Solution#two_sum has the variable name 'num2' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
-  [21]:UncommunicativeVariableName: Solution#two_sum has the variable name 'nums_index1' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
-13 total warnings
+  [21]:UncommunicativeVariableName: Solution#two_sum has the variable name 'i' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
+  [25]:UncommunicativeVariableName: Solution#two_sum has the variable name 'j' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
+  [22]:UncommunicativeVariableName: Solution#two_sum has the variable name 'num1' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
+  [26]:UncommunicativeVariableName: Solution#two_sum has the variable name 'num2' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
+  [23]:UncommunicativeVariableName: Solution#two_sum has the variable name 'nums_index1' [https://github.com/troessner/reek/blob/v6.1.0/docs/Uncommunicative-Variable-Name.md]
+14 total warnings
 
-real	0m2.569s
-user	0m2.220s
-sys	0m0.379s
+real	0m2.669s
+user	0m2.246s
+sys	0m0.443s
 

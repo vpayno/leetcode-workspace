@@ -17,9 +17,14 @@ class Solution
   # @return {::Array[Integer]}
   def two_sum(nums, target)
     nums_length = nums.length
-    nums.each { |num1|
+
+    for i in 0..(nums_length - 1)
+      num1 = nums[i]
       nums_index1 = nums.find_index(num1)
-      nums[nums_index1 + 1, nums_length].each { |num2|
+
+      for j in (nums_index1 + 1)..(nums_length - 1)
+        num2 = nums[j]
+
         test_sum = num1 + num2
 
         # uncovered
@@ -31,8 +36,8 @@ class Solution
                    nums[nums_index1 + 1, nums_length].find_index(num2) + nums_index1 + 1,
                  ]
         end
-      }
-    }
+      end
+    end
 
     []
   end # two_sum()
